@@ -53,7 +53,6 @@ class StartFragment : Fragment() {
     }
 
     private fun showDatePicker(){
-        binding.btnDate.setOnClickListener {
 // create new instance of DatePickerFragment
             val datePickerFragment = Date()
             val supportFragmentManager = requireActivity().supportFragmentManager
@@ -70,14 +69,13 @@ class StartFragment : Fragment() {
                     binding.btnDate.setText(textDate)
                         date?.let {
                             viewModel.getMoney(it)
-
                     }
 
                 }
             }
             datePickerFragment.show(supportFragmentManager, "DatePickerFragment")
         }
-    }
+
 }
 
 
